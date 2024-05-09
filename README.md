@@ -21,5 +21,30 @@ Before starting with local development, ensure you have Node.js and MongoDB inst
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/keeper.git
+   git clone https://github.com/HelloWorldElliot/FS-final.git
    ```
+2. **Implement the dependencies for backend**
+   ```bash
+   npm install
+   ```
+3. **Implement the dependencies for frontend**
+   ```bash
+   cd ui
+   npm install
+   ```
+NOTE: Since the codesandbox of the midterm project didn't use the newest version of nodejs you might need to change the version to older one
+   ```bash
+   nvm install 16
+   nvm use 16
+   ```
+4. **run backend locally**
+   ```bash
+   cd ..
+   node index.js
+   ```
+5. **run frontend locally**
+   ```bash
+   cd ui
+   npm start
+   ```
+
