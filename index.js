@@ -15,7 +15,9 @@ var CONNECTION_STRING = "mongodb+srv://admin:Aa123456@cluster0.fxawmkk.mongodb.n
 
 var DATABASENAME="notetaker";
 var database
-app.listen(5000,()=>{
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT,()=>{
     Mongoclient.connect(CONNECTION_STRING,(error,client)=>{
         database=client.db(DATABASENAME);
         console.log("Mongo DB COnnection Successful");
