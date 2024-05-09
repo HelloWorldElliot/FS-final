@@ -41,8 +41,9 @@ app.post('/api/notetaker/AddNotes',multer().none(),(request,response)=>{
 })
 
 app.delete('/api/notetaker/DeleteNotes', (request, response) => {
+    const key = parseInt(request.query.key);
     database.collection("noteappcollection").deleteOne({
-        key: request.query.key
+        key: key
     }, (error, result) => {
         if (error || result.deletedCount === 0) {
             console.error("Failed to delete note", error);
