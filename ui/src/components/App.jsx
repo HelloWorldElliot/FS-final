@@ -10,7 +10,7 @@ function App() {
   // Fetch notes from backend on initial load
   async function fetchNotes() {
     try {
-      const response = await fetch('http://localhost:5000/api/notetaker/GetNotes');
+      const response = await fetch('https://fs-final-production.up.railway.app/api/notetaker/GetNotes');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -28,7 +28,7 @@ function App() {
 
   async function addNote(noteToAdd) {
     try {
-      const response = await fetch('http://localhost:5000/api/notetaker/AddNotes', {
+      const response = await fetch('https://fs-final-production.up.railway.app/api/notetaker/AddNotes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ function App() {
   async function deleteNote(noteId) {
     try {
       console.log("key to delete",noteId)
-      const response = await fetch(`http://localhost:5000/api/notetaker/DeleteNotes?key=${noteId}`, {
+      const response = await fetch(`https://fs-final-production.up.railway.app/api/notetaker/DeleteNotes?key=${noteId}`, {
         method: 'DELETE'
       });
 
